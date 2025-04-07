@@ -25,12 +25,3 @@ This project collects and analyzes real-time Berlin public transport data using 
 - **Tableau** – interactive dashboard
 
 ---
-
-## 🧪 Sample Analysis (BigQuery)
-
-```sql
--- Average delay by line
-SELECT line, ROUND(AVG(delay_minutes), 2) AS avg_delay
-FROM `bvg-transport-project-455913.transport_data.departures`
-GROUP BY line
-ORDER BY avg_delay DESC
